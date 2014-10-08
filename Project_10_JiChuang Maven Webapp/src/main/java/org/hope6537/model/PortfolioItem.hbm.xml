@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="org.hope6537.model.PortfolioItem" table="PortfolioItem_DataBase">
+		<id name="pid" type="integer">
+			<column name="pid"></column>
+			<generator class="increment"></generator>
+		</id>
+		<property name="ptitle" type="string">
+			<column name="ptitle"></column>
+		</property>
+		<property name="pinfo" type="string">
+			<column name="pinfo"></column>
+		</property>
+		<property name="pquestions" type="string">
+			<column name="pquestions"></column>
+		</property>
+		<property name="panswers" type="string">
+			<column name="panswers"></column>
+		</property>
+		<property name="plink" type="string">
+			<column name="plink"></column>
+		</property>
+		<property name="pimages" type="string">
+			<column name="pimages"></column>
+		</property>
+		<property name="pimageinfos" type="string">
+			<column name="pimageinfos"></column>
+		</property>
+
+		<many-to-one name="puid" class="org.hope6537.model.Userinfo"
+			column="puid" lazy="false" cascade="save-update">
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
