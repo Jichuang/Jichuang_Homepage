@@ -7,6 +7,7 @@
 	String basePath = request.getScheme() + "://"
 	+ request.getServerName() + ":" + request.getServerPort()
 	+ path + "/";
+	System.out.println("The New");
 	ArrayList<Pair> pairs = Portfolio.getPairs();
 	List<PortfolioItem> list = (List<PortfolioItem>)request.getAttribute("PORTFOLIOLIST");
 	%>
