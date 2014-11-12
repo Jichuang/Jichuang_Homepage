@@ -12,8 +12,6 @@ public interface PortfolioItemDao {
 
 	PortfolioItem selectFromPortfolioItemFromPrimaryKey(int id);
 
-	int deletePortfolioItemByPrimaryKey(int id);
-
 	List<PortfolioItem> selectAllPortfolioItem();
 
 	List<PortfolioItem> selectPortfolioItemsByHQL(String hql);

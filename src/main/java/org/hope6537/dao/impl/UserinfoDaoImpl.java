@@ -32,11 +32,6 @@ public class UserinfoDaoImpl implements UserinfoDao {
 		return 0;
 	}
 
-	public int updateUserinfoByPrimaryKey(int id) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 	public List<Userinfo> selectUserinfoAll() {
 		Session session = sessionFactory.getCurrentSession();
 		@SuppressWarnings("unchecked")

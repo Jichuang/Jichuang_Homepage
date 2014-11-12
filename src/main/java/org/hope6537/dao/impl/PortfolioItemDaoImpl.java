@@ -36,10 +36,6 @@ public class PortfolioItemDaoImpl implements PortfolioItemDao {
 				PortfolioItem.class, id);
 	}
 
-	public int deletePortfolioItemByPrimaryKey(int id) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	@SuppressWarnings("unchecked")
 	public List<PortfolioItem> selectAllPortfolioItem() {

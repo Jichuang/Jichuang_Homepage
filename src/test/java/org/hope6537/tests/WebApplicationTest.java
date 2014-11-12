@@ -11,6 +11,7 @@ public class WebApplicationTest extends SpringHelper {
 		super(true);
 	}
 
+	@Test
 	public void test() {
 		PortfolioItemService itemService = (PortfolioItemService) context
 				.getBean("portfolioItemService");

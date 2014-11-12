@@ -12,7 +12,6 @@ public interface UserinfoDao {
 
 	int updateUserinfoByObject(Userinfo userinfo);
 
-	int updateUserinfoByPrimaryKey(int id);
 
 	List<Userinfo> selectUserinfoAll();
 

@@ -44,42 +44,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body class="collapsing_header">
-	<!-- 网页抬头 -->
-	<header>
-		<div class="container">
-			<div class="navbar">
-				<div class="navbar-inner">
-					<a class="brand" href="index.jsp"> <img
-						src="images/restart_logo.png" width="90" height="90"
-						alt="optional logo" /> <span class="logo_title"><strong><%=Header.GROUPNAME%></strong></span>
-						<span class="logo_subtitle"><%=Header.GROUPTHINK%> </span>
-					</a> <a class="btn btn-navbar" data-toggle="collapse"
-						data-target=".nav-collapse"><span class="nb_left pull-left">
-							<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</span> <span class="nb_right pull-right"><%=Header.MENU%></span> </a>
-					<div class="nav-collapse collapse">
-						<ul class="nav pull-right">
-							<li><a href="index.jsp"><%=Header.INDEX%></a></li>
-							<li class="active"><a href="about_us.jsp"><%=Header.ABOUT_US%></a></li>
-							<%-- <li><a href="services.jsp"><%=Header.SERVICE%></a></li> --%>
-							<li><a href="portfolio.jsp"><%=Header.PROTFOLIO%></a></li>
-							<li><a href="blog.jsp"><%=Header.BLOG%></a></li>
-							<li><a href="contact.jsp"><%=Header.CONTACT%></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="social_media_wrapper">
-				<button class="btn btn-primary">Coder's Road</button>
-			</div>
-			<div id="sign">
-				<a href="register.jsp"><i class="icon icon-user"></i><%=Header.REGISTER%>
-					/ <%=Header.SIGN_IN%></a>
-			</div>
-		</div>
-	</header>
-	<!-- 抬头结束 -->
+	<%@include file="head.jsp" %>
 	<div class="full_page_photo"
 		style="background-image: url(images/about_us_new.jpg);">
 		<div class="container">
@@ -204,92 +169,7 @@
 				</article>
 			</section>
 		</div>
-		<!-- 网页尾端 -->
-		<footer>
-			<section id="twitter_feed_wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="span1 twitter_feed_icon">
-							<a href="#twitter"><i class="icon icon-ok"></i></a>
-						</div>
-						<div class="span11">
-							<blockquote>
-								<p><%=Footer.WORDS%></p>
-								<%=Footer.AUTHOR%>
-							</blockquote>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="footer_teasers_wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="span4 footer_teaser">
-							<h3><%=Footer.CONTACT%></h3>
-							<p><%=Footer.GROUPNAME%></p>
-							<p>
-								<i class="icon-map-marker"></i>
-								<%=Footer.ADDRESS%>
-							</p>
-							<p>
-								<i class="icon-phone"></i>
-								<%=Footer.MOBLEPHONE%>
-							</p>
-							<p>
-								<i class="icon-print"></i>
-								<%=Footer.PHONE%>
-							</p>
-							<p>
-								<i class="icon-envelope"></i>
-								<%=Footer.EMAIL%>
-							</p>
-						</div>
-						<!-- 
-						等以后添加模块再写入
-						<div class="span4 footer_teaser">
-							<h3>最近新闻</h3>
-							<ul class="media-list">
-								<li class="media"><a href="#" class="media-photo"
-									style="background-image:url(images/portfolio/t5.jpg)"></a> 
-
-<a
-									href="#" class="media-date">8<span>AUG</span></a>
-									<h5 class="media-heading">
-										<a href="#">一些新闻标题</a>
-									</h5>
-									<p>内容的简短概括（待添加）</p></li>
-								<li class="media"><a href="#" class="media-photo"
-									style="background-image:url(images/portfolio/t4.jpg)"></a> 
-
-<a
-									href="#" class="media-date">7<span>AUG</span></a>
-									<h5 class="media-heading">
-										<a href="#">一些新闻标题</a>
-									</h5>
-									<p>内容的简短概括（待添加）</p></li>
-							</ul>
-						</div>
-						<div class="span4 footer_teaser">
-							<h3>FlickrFeed特效</h3>
-							<p>
-								资源提供 &copy; by <a href="http://www.cssmoban.com/"
-									target="_blank">Dimitra Giannouka</a>.
-							</p>
-							<ul>
-							</ul>
-						</div> -->
-					</div>
-				</div>
-			</section>
-			<section id="copyright">
-				<div class="container">
-					<div class="row">
-						<div class="span6"><%=Footer.COPYRIGHT%></div>
-					</div>
-				</div>
-			</section>
-		</footer>
-		<!-- 尾端结束 -->
+		<%@include file="footer.jsp" %>
 	</div>
 	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
 	<script>

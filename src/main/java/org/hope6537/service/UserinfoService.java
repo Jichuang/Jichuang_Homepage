@@ -12,8 +12,6 @@ public interface UserinfoService {
 
 	int updateUserinfoByObject(Userinfo userinfo);
 
-	int updateUserinfoByPrimaryKey(int id);
-
 	List<Userinfo> selectUserinfoAll();
 
 	List<Userinfo> selectUserinfoByHQL(String hql);
