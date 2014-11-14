@@ -1,7 +1,9 @@
 package org.hope6537.tests;
 
 import org.hope6537.model.PortfolioItem;
+import org.hope6537.model.Userinfo;
 import org.hope6537.service.PortfolioItemService;
+import org.hope6537.service.UserinfoService;
 import org.hope6537.utils.SpringHelper;
 import org.junit.Test;
 
@@ -12,12 +14,22 @@ public class WebApplicationTest extends SpringHelper {
 	}
 
 	@Test
-	public void test() {
+	public void testPortfolioItem() {
 		PortfolioItemService itemService = (PortfolioItemService) context
 				.getBean("portfolioItemService");
-		PortfolioItem item = itemService
-				.selectFromPortfolioItemFromPrimaryKey(2);
-		System.out.println(item.getPuid().getUname());
+
+		int res = itemService.insertPortfolioItem(new PortfolioItem("das",
+				"dsad", "sdqwd", "dwqwq", "dwqdwqd", "dwqdwqdw"));
+		System.out.println(res);
+	}
+
+	@Test
+	public void testUserinfoService() {
+		UserinfoService userinfoService = (UserinfoService) context
+				.getBean("userinfoService");
+		int res = userinfoService.insertUserinfo(new Userinfo("Hope6537",
+				"hope6537@qq.com", "123456", "正常"));
+		System.out.println(res);
 	}
 
 	@Test
