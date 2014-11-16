@@ -1,12 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
-	request.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(
-			request, response);
-%>
+<%@ page language="java" import="java.util.*,org.hope6537.message.*"
+	pageEncoding="UTF-8"%>
 
 <script type="text/javascript" src="assets/js/jquery-latest.min.js"></script>
 <script>
@@ -26,8 +19,11 @@
 <script type="text/javascript" src="assets/js/jquery.ui.totop.js"></script>
 <script type="text/javascript" src="assets/js/easing.js"></script>
 <script type="text/javascript" src="assets/js/restart_theme.js"></script>
-<%
-	String titleVal = request.getAttribute("PAGE");
-%>
-
-
+<script type="text/javascript">
+	$(document).ready(function() {
+		var list = $("ul li");
+		var title = $("#title").text();
+		var finder = list.find(title);		
+		finder.attr("class", "active");
+	});
+</script>

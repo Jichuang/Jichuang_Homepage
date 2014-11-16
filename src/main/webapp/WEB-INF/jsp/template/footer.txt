@@ -1,0 +1,30 @@
+<!-- 
+						等以后添加模块再写入
+						<div class="span4 footer_teaser">
+							<h3>最近新闻</h3>
+							<ul class="media-list">
+								<li class="media"><a href="#" class="media-photo"
+									style="background-image:url(images/portfolio/t5.jpg)"></a> 
+									<a href="#" class="media-date">8<span>AUG</span></a>
+									<h5 class="media-heading">
+										<a href="#">一些新闻标题</a>
+									</h5>
+									<p>内容的简短概括（待添加）</p></li>
+								<li class="media"><a href="#" class="media-photo"
+									style="background-image:url(images/portfolio/t4.jpg)"></a> 
+									<a href="#" class="media-date">7<span>AUG</span></a>
+									<h5 class="media-heading">
+										<a href="#">一些新闻标题</a>
+									</h5>
+									<p>内容的简短概括（待添加）</p></li>
+							</ul>
+						</div>
+						<div class="span4 footer_teaser">
+							<h3>FlickrFeed特效</h3>
+							<p>
+								资源提供 &copy; by <a href="http://www.cssmoban.com/"
+									target="_blank">Dimitra Giannouka</a>.
+							</p>
+							<ul>
+							</ul>
+						</div> -->

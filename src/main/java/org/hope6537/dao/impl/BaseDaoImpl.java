@@ -5,38 +5,43 @@ import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hope6537.dao.BaseDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/** 
+ *<pre>
+ *
+ *</pre>
+ * <p>Describe: 持久层通用增删改成业务类</p>
+ * <p>Using: </p>
+ * <p>DevelopedTime: 2014年10月14日下午1:22:17</p>
+ * <p>Company: ChangChun Unviersity JiChuang Team</p>
+ * @author Hope6537
+ * @version 1.0
+ * @see
+ */
 public class BaseDaoImpl<T> implements BaseDao<T> {
 
 	private Class<?> clz;
 
 	@Autowired(required = true)
-	private SessionFactory sessionFactory;
-
-	private Session session;
+	protected SessionFactory sessionFactory;
 
 	public BaseDaoImpl() {
 		ParameterizedType type = (ParameterizedType) this.getClass()
 				.getGenericSuperclass();
 		clz = (Class<?>) type.getActualTypeArguments()[0];
-		if (sessionFactory != null) {
-			;
-		} else {
-			session = sessionFactory.getCurrentSession();
-		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public T selectEntryFromPrimaryKey(Serializable id) {
-		return (T) session.get(clz, id);
+		return (T) sessionFactory.getCurrentSession().get(clz, id);
 	}
 
 	public int insertEntry(T t) {
 		try {
-			session.save(t);
+			sessionFactory.getCurrentSession().save(t);
 			return 1;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -46,7 +51,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
 	public int updateEntryByObject(T t) {
 		try {
-			session.update(t);
+			sessionFactory.getCurrentSession().update(t);
 			return 1;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -57,7 +62,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 	public int deleteEntryByPrimaryKey(Serializable id) {
 		try {
 			T t = this.selectEntryFromPrimaryKey(id);
-			session.delete(t);
+			sessionFactory.getCurrentSession().delete(t);
 			return 1;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -67,13 +72,14 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
 	@SuppressWarnings("unchecked")
 	public List<T> selectEntryAll() {
-		return session.createQuery("from" + clz.getSimpleName()).list();
+		return sessionFactory.getCurrentSession()
+				.createQuery("from" + clz.getSimpleName()).list();
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<T> selectEntryByHQL(String hql) {
 		List<T> list = new ArrayList<T>();
-		list = session.createQuery(hql).list();
+		list = sessionFactory.getCurrentSession().createQuery(hql).list();
 		return list;
 	}
 

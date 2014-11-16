@@ -31,7 +31,7 @@ public class PortfolioItemController {
 		request.setAttribute("questions", questions);
 		request.setAttribute("answer", answer);
 		request.setAttribute("PORTFOLIOITEM", portfolioItem);
-		return "portfolio_item";
+		return "WEB-INF/jsp/portfolio_item";
 	}
 
 	@RequestMapping("/getAllPortfolioItem")
@@ -39,6 +39,6 @@ public class PortfolioItemController {
 		List<PortfolioItem> list = this.portfolioItemService
 				.selectAllPortfolioItem();
 		request.setAttribute("PORTFOLIOLIST", list);
-		return "portfolio";
+		return "WEB-INF/jsp/portfolio";
 	}
 }
