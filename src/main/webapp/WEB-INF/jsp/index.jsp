@@ -59,7 +59,8 @@
 			<section class="call_to_action">
 				<h3><%=Index.MAINMESSAGE%></h3>
 				<h4><%=Index.MAINMESSAGEDOWN%></h4>
-				<a class="btn btn-primary btn-large" href="contact.jsp">Join us!</a>
+				<a class="btn btn-primary btn-large" href="page/contact.hopedo">Join
+					us!</a>
 			</section>
 			<section id="features_teasers_wrapper">
 				<div class="row">
@@ -91,14 +92,14 @@
 					<div class="portfolio_item span3">
 						<div class="portfolio_photo"
 							style="background-image:url(assets/images/portfolio/z2.jpg)">
-							<a href="portfolio_item.jsp"> <i
+							<a href="page/portfolio.hopedo"> <i
 								class="icon-2x icon-external-link"></i>
 								<p><%=Index.WORK1%></p>
 							</a>
 						</div>
 						<div class="portfolio_description">
 							<h3>
-								<a href="portfolio_item.jsp"><%=Index.WORK1AUTHOR%></a>
+								<a href="page/aboutus.hopedo"><%=Index.WORK1AUTHOR%></a>
 							</h3>
 							<p><%=Index.CODER%></p>
 						</div>
@@ -106,14 +107,14 @@
 					<div class="portfolio_item span3">
 						<div class="portfolio_photo"
 							style="background-image:url(assets/images/IMG_20140903_184423.jpg)">
-							<a href="portfolio_item.jsp"> <i
+							<a href="page/portfolio.hopedo"> <i
 								class="icon-2x icon-external-link"></i>
 								<p><%=Index.WORK2%></p>
 							</a>
 						</div>
 						<div class="portfolio_description">
 							<h3>
-								<a href="portfolio_item.jsp"><%=Index.WORK2AUTHOR%></a>
+								<a href="page/aboutus.hopedo"><%=Index.WORK2AUTHOR%></a>
 							</h3>
 							<p><%=Index.CODER%></p>
 						</div>
@@ -121,14 +122,14 @@
 					<div class="portfolio_item span3">
 						<div class="portfolio_photo"
 							style="background-image:url(assets/images/Deserts.jpg)">
-							<a href="portfolio_item.jsp"> <i
+							<a href="page/portfolio.hopedo"> <i
 								class="icon-2x icon-external-link"></i>
 								<p><%=Index.WORK3%></p>
 							</a>
 						</div>
 						<div class="portfolio_description">
 							<h3>
-								<a href="portfolio_item.jsp"><%=Index.WORK3AUTHOR%></a>
+								<a href="page/aboutus.hopedo"><%=Index.WORK3AUTHOR%></a>
 							</h3>
 							<p><%=Index.CODER%></p>
 						</div>
@@ -136,14 +137,14 @@
 					<div class="portfolio_item span3">
 						<div class="portfolio_photo"
 							style="background-image:url(assets/images/fanchunshuai.jpg)">
-							<a href="portfolio_item.jsp"> <i
+							<a href="page/portfolio.hopedo"> <i
 								class="icon-2x icon-external-link"></i>
 								<p><%=Index.WORK4%></p>
 							</a>
 						</div>
 						<div class="portfolio_description">
 							<h3>
-								<a href="portfolio_item.jsp"><%=Index.WORK4AUTHOR%></a>
+								<a href="page/aboutus.hopedo"><%=Index.WORK4AUTHOR%></a>
 							</h3>
 							<p><%=Index.CODER%></p>
 						</div>

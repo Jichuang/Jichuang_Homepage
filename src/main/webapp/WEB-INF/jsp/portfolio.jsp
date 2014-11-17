@@ -31,18 +31,18 @@
 				<h1><%=Portfolio.MAIN%></h1>
 				<h2><%=Portfolio.DESCRIBE%></h2>
 				<ul class="breadcrumb pull-right">
-					<li><a href="index.jsp"><%=Portfolio.INDEX%></a> <span
+					<li><a href="page/index.hopedo"><%=Portfolio.INDEX%></a> <span
 						class="divider">/</span></li>
 					<li class="active"><%=Portfolio.MAIN%></li>
 				</ul>
 			</div>
-			<ul id="portfolio_filters">
+			<%-- <ul id="portfolio_filters">
 				<li><a href="#" data-filter="*"><%=Portfolio.SHOWALL%></a></li>
 				<li><a href="#" data-filter=".web"><%=Portfolio.SHOW1%></a></li>
 				<li><a href="#" data-filter=".app"><%=Portfolio.SHOW2%></a></li>
 				<li><a href="#" data-filter=".game"><%=Portfolio.SHOW3%></a></li>
 				<li><a href="#" data-filter=".github"><%=Portfolio.SHOW4%></a></li>
-			</ul>
+			</ul> --%>
 			<div id="portfolio_container" class="portfolio_strict row">
 				<%--
 					标准示例
@@ -80,18 +80,6 @@
 				<%
 					}
 				%>
-				<div class="portfolio_item app span4">
-					<div class="portfolio_photo"
-						style="background-image:url(images/portfolio/a3.jpg)">
-						<a href="portfolio_item.jsp"> <i
-							class="icon-2x icon-external-link"></i>
-							<p><%=pairs.get(0).getDescribe()%></p>
-						</a>
-					</div>
-					<div class="portfolio_description">
-						<%=pairs.get(0).getAuthor()%>
-					</div>
-				</div>
 				<%--
 				<div class="portfolio_item game span4">
 					<div class="portfolio_photo"

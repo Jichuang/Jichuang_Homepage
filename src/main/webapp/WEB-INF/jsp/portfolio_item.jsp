@@ -40,9 +40,9 @@
 			<section id="portfolio_item">
 				<div class="hgroup">
 					<ul class="breadcrumb pull-left">
-						<li><a href="index.jsp"><%=PortfolioItem.INDEX%></a> <span
-							class="divider">/</span></li>
-						<li><a href="portfolio.jsp"><%=PortfolioItem.PORTFOLIO%></a>
+						<li><a href="page/index.hopedo"><%=PortfolioItem.INDEX%></a>
+							<span class="divider">/</span></li>
+						<li><a href="page/portfolio.hopedo"><%=PortfolioItem.PORTFOLIO%></a>
 							<span class="divider">/</span></li>
 						<li class="active"><%=PortfolioItem.PORTFOLIOITEM%></li>
 					</ul>

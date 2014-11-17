@@ -28,7 +28,7 @@
 					<h1>联系我们</h1>
 					<h2>如果您想和我们攻克难题、或是要和我们分享知识，又或是对我们提出宝贵建议和意见</h2>
 					<ul class="breadcrumb pull-right">
-						<li><a href="index.jsp">主页</a> <span class="divider">/</span></li>
+						<li><a href="page/index.hopedo">主页</a> <span class="divider">/</span></li>
 						<li class="active">联系我们</li>
 					</ul>
 				</div>

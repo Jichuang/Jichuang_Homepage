@@ -3,7 +3,7 @@ package org.hope6537.message;
 public class AboutUS {
 
 	public static final String MAIN = "Fun for Code , Code for Fun";
-	public static final String MAINDOWN = "while(we're alive){ <strong>Code; Code; Code;</strong> }";
+	public static final String MAINDOWN = "while(we're alive){ <strong>Code(); Code(); Code();</strong> }";
 	public static final String ABOUTUS = "关于我们";
 	public static final String SHORTMES = "集创团队正式成立于2014年3月，主要方向为开发基于java的Web应用程序，基于Android的App应用、基于Cocos2D-X的手机游戏";
 	public static final String INDEX = "主页";

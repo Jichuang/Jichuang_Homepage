@@ -39,7 +39,7 @@
 						<%=AboutUS.SHORTMES%>
 					</h2>
 					<ul class="breadcrumb pull-right">
-						<li><a href="index.jsp"><%=AboutUS.INDEX%></a> <span
+						<li><a href="page/index.hopedo"><%=AboutUS.INDEX%></a> <span
 							class="divider">/</span></li>
 						<li class="active"><%=AboutUS.ABOUTUS%></li>
 					</ul>

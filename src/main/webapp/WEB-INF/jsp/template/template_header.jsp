@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="navbar">
 			<div class="navbar-inner">
-				<a class="brand" href="index.jsp"> <img
+				<a class="brand" href="page/index.hopedo"> <img
 					src="assets/images/restart_logo.png" width="90" height="90"
 					alt="optional logo" /> <span class="logo_title"><strong><%=Header.GROUPNAME%></strong></span>
 					<span class="logo_subtitle"><%=Header.GROUPTHINK%> </span>

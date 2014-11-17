@@ -22,7 +22,7 @@
 </head>
 <body>
 	<!-- 网页抬头 -->
-<jsp:include page="template/template_header.jsp" />
+	<jsp:include page="template/template_header.jsp" />
 	<!-- 抬头结束 -->
 	<div id="main">
 		<div class="container">
@@ -30,7 +30,7 @@
 				<div class="hgroup">
 					<h1>注册/登录</h1>
 					<ul class="breadcrumb pull-right">
-						<li><a href="index.jsp">主 页</a> <span class="divider">/</span></li>
+						<li><a href="page/index.hopedo">主 页</a> <span class="divider">/</span></li>
 						<li class="active">注册/登录</li>
 					</ul>
 				</div>

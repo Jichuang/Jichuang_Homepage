@@ -30,7 +30,7 @@
 					<h1>团队博客</h1>
 					<h2>正在搭建中……敬请期待</h2>
 					<ul class="breadcrumb pull-right">
-						<li><a href="index.jsp">主页</a> <span class="divider">/</span></li>
+						<li><a href="page/index.hopedo">主页</a> <span class="divider">/</span></li>
 						<li class="active">博客</li>
 					</ul>
 				</div>
