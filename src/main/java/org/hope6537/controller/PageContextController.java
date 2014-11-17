@@ -51,6 +51,13 @@ public class PageContextController {
 		request.setAttribute("PAGE", "工程展示");
 		return PATH + "/portfolio";
 	}
+
+	@RequestMapping("/single")
+	public String toSingle(HttpServletRequest request) {
+		request.setAttribute("PAGE", "博客内容");
+		return PATH + "/single";
+	}
+
 	@RequestMapping("/register")
 	public String toRegister(HttpServletRequest request) {
 		request.setAttribute("PAGE", "注册/登录");
