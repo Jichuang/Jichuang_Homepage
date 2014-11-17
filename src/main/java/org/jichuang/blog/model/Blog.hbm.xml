@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="org.jichuang.blog.model.Blog" table="Blog_DataBase">
+		<id name="bId" type="integer">
+			<column name="bId"></column>
+			<generator class="increment"></generator>
+		</id>
+		<property name="bCont" type="string" length="5000">
+			<column name="bCont"></column>
+		</property>
+		<property name="bDate" type="string" length="50">
+			<column name="bDate"></column>
+		</property>
+		<property name="bInfo" type="string" length="500">
+			<column name="bInfo"></column>
+		</property>
+		<property name="bStatus" type="string" length="50">
+			<column name="bStatus"></column>
+		</property>
+		<property name="bTitle" type="string" length="50">
+			<column name="bTitle"></column>
+		</property>
+		<many-to-one name="bUid" class="org.jichuang.base.model.Userinfo"
+			column="bUid" lazy="false" cascade="save-update">
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>

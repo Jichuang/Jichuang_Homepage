@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%><%@page
-	import="org.hope6537.message.*"%>
+	import="org.jichuang.base.message.*"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -53,10 +53,11 @@
 						<p class="sign_title">使用网站账号进行登录</p>
 
 						<div class="form">
-							<form action="">
+							<form action="usr/login.hopedo ">
 								<input type="text" placeholder="邮箱地址" required=""
-									class="input-xlarge" /> <input type="text" placeholder="密码"
-									required="" class="input-xlarge" />
+									class="input-xlarge" name="uusername" /> <input
+									type="password" placeholder="密码" name="upassword" required=""
+									class="input-xlarge" />
 								<div class="forgot">
 									<label class="checkbox"> <input type="checkbox" />
 										记住我的登录状态

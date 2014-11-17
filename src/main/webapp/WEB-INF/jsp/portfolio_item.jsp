@@ -1,13 +1,13 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%><%@page
-	import="org.hope6537.message.*"%>
+	import="org.jichuang.base.message.*"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
+	+ request.getServerName() + ":" + request.getServerPort()
+	+ path + "/";
 	ArrayList<Pair> pairs = PortfolioItem.getPair();
-	org.hope6537.model.PortfolioItem portfolioItem = (org.hope6537.model.PortfolioItem) request
-			.getAttribute("PORTFOLIOITEM");
+	PortfolioItem portfolioItem = (PortfolioItem) request
+	.getAttribute("PORTFOLIOITEM");
 	String id = portfolioItem.getPid() + "";
 	/* String [] images = portfolioItem.getPimages().split("#");
 	String [] imageinfos = portfolioItem.getPimageinfos().split("#");

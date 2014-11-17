@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%><%@page
-	import="org.hope6537.message.*"%>
+	import="org.jichuang.base.message.*"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"

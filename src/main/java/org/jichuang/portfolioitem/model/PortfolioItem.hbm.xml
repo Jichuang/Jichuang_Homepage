@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="org.jichuang.portfolioitem.model.PortfolioItem" table="PortfolioItem_DataBase">
+  <id name="pid" type="integer">
+   <column name="pid"/>
+   <generator class="increment"/>
+  </id>
+  <property generated="never" lazy="false" name="ptitle" type="string">
+   <column name="ptitle"/>
+  </property>
+  <property generated="never" lazy="false" name="pinfo" type="string">
+   <column name="pinfo"/>
+  </property>
+  <property generated="never" lazy="false" name="pquestions" type="string">
+   <column name="pquestions"/>
+  </property>
+  <property generated="never" lazy="false" name="panswers" type="string">
+   <column name="panswers"/>
+  </property>
+  <property generated="never" lazy="false" name="plink" type="string">
+   <column name="plink"/>
+  </property>
+  <property generated="never" lazy="false" name="pimages" type="string">
+   <column name="pimages"/>
+  </property>
+  <property generated="never" lazy="false" name="pimageinfos" type="string">
+   <column name="pimageinfos"/>
+  </property>
+  <many-to-one cascade="save-update" class="org.jichuang.base.model.Userinfo"
+	column="puid" lazy="false" name="puid" />
+ </class>
+</hibernate-mapping>

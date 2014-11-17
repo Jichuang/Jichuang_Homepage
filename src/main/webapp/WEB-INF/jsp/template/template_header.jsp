@@ -1,5 +1,9 @@
-<%@ page language="java" import="java.util.*,org.hope6537.message.*"
+<%@ page language="java" import="java.util.*,org.jichuang.base.message.*"
 	pageEncoding="UTF-8"%>
+<%@ page import="org.hope6537.model.*"%>
+<%
+	Userinfo loginedUser = (Userinfo) session.getAttribute("USERINFO");
+%>
 <!-- 网页抬头 -->
 <header>
 	<div class="container">
@@ -30,8 +34,23 @@
 			<button class="btn btn-primary">Coder's Road</button>
 		</div>
 		<div id="sign">
+			<%
+				if (loginedUser == null) {
+			%>
 			<a href="page/register.hopedo"><i class="icon icon-user"></i><%=Header.REGISTER%>
 				/ <%=Header.SIGN_IN%></a>
+			<%
+				} else {
+			%>
+			<a>
+			<i class="icon icon-user"></i>欢迎！
+			<%=loginedUser.getUname().split("#")[0]%>
+			<span class="divider">/</span>
+			<%=loginedUser.getUname().split("#")[1]%>
+			</a>
+			<%
+				}
+			%>
 		</div>
 	</div>
 </header>

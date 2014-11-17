@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,org.hope6537.message.*"
+<%@ page language="java" import="java.util.*,org.jichuang.base.message.*"
 	pageEncoding="UTF-8"%>
 
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->

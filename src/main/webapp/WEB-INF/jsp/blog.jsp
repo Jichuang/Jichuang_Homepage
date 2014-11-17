@@ -1,4 +1,4 @@
-<%@page import="org.hope6537.message.*"%>
+<%@page import="org.jichuang.base.message.*"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
@@ -36,16 +36,22 @@
 					</ul>
 				</div>
 				<div class="row">
-					<div id="leftcol" class="span8">
+					<div id="col" class="span8">
+						<%
+							for (int i = 0; i < 5; i++) {
+						%>
 						<article class="post">
 							<div class="post_header">
 								<h3 class="post_title">
 									<a href="page/single.hopedo">《Thinking in Java》学习笔记 第21章 并发</a>
 								</h3>
 								<div class="post_sub">
-									<i class="icon-time"></i> 2014-11-17 15:43:51 &nbsp; <a
+									<i class="icon icon-user"></i><a href="#"> Hope6537 </a><span
+										class="divider">/</span> <i class="icon-time"></i> 2014-11-17
+									15:43:51 <span class="divider">/</span> <a
 										href="single_post.html#post_comments"><i
 										class="icon-comments-alt"></i> 6条评论</a>
+
 								</div>
 							</div>
 							<div class="post_content">
@@ -54,65 +60,9 @@
 									但是什么是并发？并发能做什么？并发如何实现？....</p>
 							</div>
 						</article>
-						<article class="post">
-							<div class="post_header">
-								<h3 class="post_title">
-									<a href="single_post.html">Fugiat dapibus, tellus ac cursus
-										commodo, mauesris condime ntum nibh, ut fermentum mas justo
-										sitters amet risus.</a>
-								</h3>
-								<div class="post_sub">
-									<i class="icon-time"></i> February 3, 2013 <a
-										href="single_post.html#post_comments"><i
-										class="icon-comments-alt"></i> 6 comments</a>
-								</div>
-							</div>
-							<div class="post_content">
-								<figure>
-									<a href="single_post.html"> <iframe
-											src="http://player.vimeo.com/video/50924290?title=0&amp;byline=0&amp;portrait=0"
-											width="100%" height="400" frameborder="0"
-											webkitallowfullscreen="" mozallowfullscreen=""
-											allowfullscreen=""></iframe>
-									</a>
-								</figure>
-								<p>Fugiat dapibus, tellus ac cursus commodo, mauesris
-									condime ntum nibh, ut fermentum mas justo sitters amet risus.
-									Cras mattis cosi sectetut amet fermens etrsaters tum aecenas
-									faucib sadips amets. Fugiat dapibus, tellus ac cursus commodo,
-									mauesris condime ntum nibh, ut fermentum mas justo sitters amet
-									risus. Cras mattis cosi sectetut amet fermens etrsaters tum
-									aecenas faucib sadips amets....</p>
-								<a href="single_post.html" class="btn btn-primary">Read More</a>
-							</div>
-						</article>
-						<article class="post">
-							<div class="post_header">
-								<h3 class="post_title">
-									<a href="single_post.html">Fugiat dapibus, tellus ac cursus
-										commodo, mauesris condime ntum nibh, ut fermentum mas justo
-										sitters amet risus.</a>
-								</h3>
-								<div class="post_sub">
-									<i class="icon-time"></i> January 12, 2013 <i
-										class="icon-comments-alt"></i> 0 comments
-								</div>
-							</div>
-							<div class="post_content">
-								<figure>
-									<a href="single_post.html"><img alt="0"
-										src="images/portfolio/a4.jpg" /></a>
-								</figure>
-								<p>Fugiat dapibus, tellus ac cursus commodo, mauesris
-									condime ntum nibh, ut fermentum mas justo sitters amet risus.
-									Cras mattis cosi sectetut amet fermens etrsaters tum aecenas
-									faucib sadips amets. Fugiat dapibus, tellus ac cursus commodo,
-									mauesris condime ntum nibh, ut fermentum mas justo sitters amet
-									risus. Cras mattis cosi sectetut amet fermens etrsaters tum
-									aecenas faucib sadips amets....</p>
-								<a href="single_post.html" class="btn btn-primary">Read More</a>
-							</div>
-						</article>
+						<%
+							}
+						%>
 						<div class="pagination pagination-centered">
 							<ul>
 								<li class="disabled"><a href="#">«</a></li>
@@ -127,6 +77,10 @@
 					</div>
 					<jsp:include page="template/template_blog_right.jsp"></jsp:include>
 				</div>
+				<label class="control-label  col-md-3">CKEditor</label>
+				<div class="col-md-9">
+					<textarea class="ckeditor form-control" name="editor1" rows="6"></textarea>
+				</div>
 			</section>
 		</div>
 
@@ -136,6 +90,8 @@
 	</div>
 	<!-- 脚本开始 -->
 	<jsp:include page="template/template_script.jsp"></jsp:include>
+	<script type="text/javascript"
+		src="assets/plugins/ckeditor/ckeditor.js"></script>
 	<!-- 脚本结束 -->
 
 </body>

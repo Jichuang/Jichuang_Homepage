@@ -1,25 +1,20 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <div id="sidebar" class="span4">
+	<aside class="widget">
+		<h4>撰写博文</h4>
+		<ul class="nav nav-tabs nav-stacked">
+			<li><a href="#">
+					<button class="btn btn-primary btn-large btn-block">
+						<i class="icon-edit"></i>我要写东西
+					</button>
+			</a></li>
+		</ul>
+	</aside>
 	<aside class="form">
 		<h4>博文快速检索</h4>
 		<form>
 			<input type="text" placeholder="搜索博文、作者..." style="width: 90%">
 		</form>
-	</aside>
-	<aside class="widget">
-		<h4>博客过滤器</h4>
-		<ul class="nav nav-tabs nav-stacked">
-			<li class="active"><a href="#">全部</a></li>
-			<li><a href="#">原创</a></li>
-			<li><a href="#">转载</a></li>
-		</ul>
-	</aside>
-	<aside class="widget ads clearfix">
-		<h4>广告位</h4>
-		<a href="#"><img src="http://placehold.it/110" alt="" /></a> <a
-			href="#"><img src="http://placehold.it/110" alt="" /></a> <a
-			href="#"><img src="http://placehold.it/110" alt="" /></a> <a
-			href="#"><img src="http://placehold.it/110" alt="" /></a>
 	</aside>
 
 	<aside class="widget">
@@ -99,4 +94,14 @@
 			</div>
 		</div>
 	</aside>
+
+	<aside class="widget ads clearfix">
+		<h4>讨论话题</h4>
+		<a href="#"><img src="http://placehold.it/110" alt="" /></a> <a
+			href="#"><img src="http://placehold.it/110" alt="" /></a> <a
+			href="#"><img src="http://placehold.it/110" alt="" /></a> <a
+			href="#"><img src="http://placehold.it/110" alt="" /></a>
+	</aside>
+
+
 </div>

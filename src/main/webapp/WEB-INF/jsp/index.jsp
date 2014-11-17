@@ -1,4 +1,4 @@
-<%@page import="org.hope6537.message.*"%>
+<%@page import="org.jichuang.base.message.*"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();

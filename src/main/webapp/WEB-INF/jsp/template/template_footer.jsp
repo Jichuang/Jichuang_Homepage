@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,org.hope6537.message.*"
+<%@ page language="java" import="java.util.*,org.jichuang.base.message.*"
 	pageEncoding="UTF-8"%>
 <footer>
 	<section id="twitter_feed_wrapper">
