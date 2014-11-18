@@ -1,6 +1,6 @@
-<%@ page language="java" import="java.util.*,org.jichuang.base.message.*"
-	pageEncoding="UTF-8"%>
-<%@ page import="org.hope6537.model.*"%>
+<%@ page language="java"
+	import="java.util.*,org.jichuang.base.message.*" pageEncoding="UTF-8"%>
+<%@ page import="org.jichuang.base.model.*"%>
 <%
 	Userinfo loginedUser = (Userinfo) session.getAttribute("USERINFO");
 %>
@@ -42,11 +42,8 @@
 			<%
 				} else {
 			%>
-			<a>
-			<i class="icon icon-user"></i>欢迎！
-			<%=loginedUser.getUname().split("#")[0]%>
-			<span class="divider">/</span>
-			<%=loginedUser.getUname().split("#")[1]%>
+			<a> <i class="icon icon-user"></i>欢迎！ <%=loginedUser.getUname().split("#")[0]%>
+				<span class="divider">/</span> <%=loginedUser.getUname().split("#")[1]%>
 			</a>
 			<%
 				}

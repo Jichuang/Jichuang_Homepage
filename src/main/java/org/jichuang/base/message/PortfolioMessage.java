@@ -2,7 +2,7 @@ package org.jichuang.base.message;
 
 import java.util.ArrayList;
 
-public class Portfolio {
+public class PortfolioMessage {
 	private static ArrayList<Pair> pairs = new ArrayList<Pair>();
 
 	public static ArrayList<Pair> getPairs() {

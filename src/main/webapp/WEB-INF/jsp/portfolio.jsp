@@ -1,5 +1,5 @@
 <%@page import="org.apache.log4j.Logger"%>
-<%@page import="org.hope6537.model.PortfolioItem"%>
+<%@page import="org.jichuang.portfolioitem.model.*"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%><%@page
 	import="org.jichuang.base.message.*"%>
 <%
@@ -8,7 +8,7 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 	System.out.println("The New");
-	ArrayList<Pair> pairs = Portfolio.getPairs();
+	ArrayList<Pair> pairs = PortfolioMessage.getPairs();
 	List<PortfolioItem> list = (List<PortfolioItem>) request
 			.getAttribute("PORTFOLIOLIST");
 %>
@@ -28,12 +28,12 @@
 	<div id="main">
 		<div class="container">
 			<div class="hgroup">
-				<h1><%=Portfolio.MAIN%></h1>
-				<h2><%=Portfolio.DESCRIBE%></h2>
+				<h1><%=PortfolioMessage.MAIN%></h1>
+				<h2><%=PortfolioMessage.DESCRIBE%></h2>
 				<ul class="breadcrumb pull-right">
-					<li><a href="page/index.hopedo"><%=Portfolio.INDEX%></a> <span
-						class="divider">/</span></li>
-					<li class="active"><%=Portfolio.MAIN%></li>
+					<li><a href="page/index.hopedo"><%=PortfolioMessage.INDEX%></a>
+						<span class="divider">/</span></li>
+					<li class="active"><%=PortfolioMessage.MAIN%></li>
 				</ul>
 			</div>
 			<%-- <ul id="portfolio_filters">

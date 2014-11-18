@@ -124,18 +124,6 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.5.4</version>
 		</dependency>
-
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>1.6</version>
-		</dependency>
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
-
 	</dependencies>
 	<build>
 		<finalName>Project_10_JiChuang</finalName>

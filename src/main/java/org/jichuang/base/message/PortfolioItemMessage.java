@@ -3,7 +3,7 @@ package org.jichuang.base.message;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class PortfolioItem {
+public class PortfolioItemMessage {
 	private static ArrayList<Pair> pair = new ArrayList<Pair>();
 
 	public static ArrayList<Pair> getPair() {

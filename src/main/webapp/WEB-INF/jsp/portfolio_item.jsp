@@ -1,13 +1,15 @@
+<%@ page import="org.jichuang.portfolioitem.model.*"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%><%@page
 	import="org.jichuang.base.message.*"%>
+
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
-	+ request.getServerName() + ":" + request.getServerPort()
-	+ path + "/";
-	ArrayList<Pair> pairs = PortfolioItem.getPair();
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+	ArrayList<Pair> pairs = PortfolioItemMessage.getPair();
 	PortfolioItem portfolioItem = (PortfolioItem) request
-	.getAttribute("PORTFOLIOITEM");
+			.getAttribute("PORTFOLIOITEM");
 	String id = portfolioItem.getPid() + "";
 	/* String [] images = portfolioItem.getPimages().split("#");
 	String [] imageinfos = portfolioItem.getPimageinfos().split("#");
@@ -40,11 +42,11 @@
 			<section id="portfolio_item">
 				<div class="hgroup">
 					<ul class="breadcrumb pull-left">
-						<li><a href="page/index.hopedo"><%=PortfolioItem.INDEX%></a>
+						<li><a href="page/index.hopedo"><%=PortfolioItemMessage.INDEX%></a>
 							<span class="divider">/</span></li>
-						<li><a href="page/portfolio.hopedo"><%=PortfolioItem.PORTFOLIO%></a>
+						<li><a href="page/portfolio.hopedo"><%=PortfolioItemMessage.PORTFOLIO%></a>
 							<span class="divider">/</span></li>
-						<li class="active"><%=PortfolioItem.PORTFOLIOITEM%></li>
+						<li class="active"><%=PortfolioItemMessage.PORTFOLIOITEM%></li>
 					</ul>
 				</div>
 				<div class="row">
@@ -102,7 +104,7 @@
 								%>
 							</div>
 							<a href="<%=portfolioItem.getPlink()%>"
-								class="btn btn-danger btn-large center-block"><%=PortfolioItem.BUTTON%></a>
+								class="btn btn-danger btn-large center-block"><%=PortfolioItemMessage.BUTTON%></a>
 						</article>
 					</div>
 				</div>
