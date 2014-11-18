@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/page")
 public class PageContextController {
 
-	public static final String PATH = "WEB-INF/jsp";
+	public static final String PATH = "";
 
 	@Autowired(required = true)
 	private PortfolioItemService portfolioItemService;
@@ -59,7 +59,7 @@ public class PageContextController {
 
 	@RequestMapping("/register")
 	public String toRegister(HttpServletRequest request) {
-		request.setAttribute("PAGE", "注册/登录");
+		request.setAttribute("PAGE", "注册登录");
 		return PATH + "/register";
 	}
 

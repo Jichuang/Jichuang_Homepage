@@ -45,6 +45,13 @@ public class UserinfoController {
 		}
 		request.setAttribute("PAGE", "登录/注册");
 		return PageContextController.PATH + "/register";
+	}
+
+	@RequestMapping("/logout")
+	public String toLogout(HttpServletRequest request) {
+		request.getSession().setAttribute("USERINFO", null);
+		request.setAttribute("PAGE", "网站首页");
+		return "index";
 
 	}
 }

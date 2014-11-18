@@ -5,7 +5,6 @@
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
-	System.out.println(basePath);
 %>
 <!doctype html>
 <head>

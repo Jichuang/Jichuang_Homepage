@@ -9,19 +9,21 @@
 	<property name="dialect">
 		org.hibernate.dialect.MySQLDialect
 	</property>
-	<!-- 
-		<property name="connection.url"> jdbc:mysql://localhost:3306/jichuang
-		</property>
-		<property name="connection.username">root</property>
-		<property name="connection.password">4236537</property>
-		<property name="connection.driver_class">
+
+	<!-- <property name="connection.url">
+		jdbc:mysql://localhost:3306/jichuang
+	</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">4236537</property>
+	<property name="connection.driver_class">
 		com.mysql.jdbc.Driver
-		</property>
-		<property name="current_session_context_class">thread</property> -->
+	</property>
+	<property name="current_session_context_class">thread</property> -->
 	<property name="show_sql">true</property>
 	<mapping resource="org/jichuang/base/model/Userinfo.hbm.xml" />
 	<mapping
 		resource="org/jichuang/portfolioitem/model/PortfolioItem.hbm.xml" />
+	<mapping resource="org/jichuang/blog/model/Blog.hbm.xml" />
 
 </session-factory>
 

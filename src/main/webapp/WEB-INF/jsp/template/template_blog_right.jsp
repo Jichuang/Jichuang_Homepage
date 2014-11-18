@@ -3,7 +3,7 @@
 	<aside class="widget">
 		<h4>撰写博文</h4>
 		<ul class="nav nav-tabs nav-stacked">
-			<li><a href="#">
+			<li><a href="blog/insertPage.hopedo">
 					<button class="btn btn-primary btn-large btn-block">
 						<i class="icon-edit"></i>我要写东西
 					</button>

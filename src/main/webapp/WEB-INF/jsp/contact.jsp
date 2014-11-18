@@ -74,8 +74,7 @@
 	<!-- 脚本开始 -->
 	<jsp:include page="template/template_script.jsp" />
 	<!-- 脚本结束 -->
-	<script type="text/javascript"
-		src="assets/js/noty/packaged/jquery.noty.packaged.js"></script>
+	
 	<script type="text/javascript">
 		$("#givemessage").click(function() {
 			noty({

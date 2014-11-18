@@ -39,9 +39,9 @@
 
 						<div class="social_sign">
 							<h3>使用社交网站账号进行登录</h3>
-							<a class="fb" id="sb"><i class="icon icon-facebook"></i></a> <a
-								class="tw" id="sb"><i class="icon icon-twitter"></i></a> <a
-								class="gp" id="sb"><i class="icon icon-google-plus"></i></a>
+							<a class="fb" id="sb1"><i class="icon icon-facebook"></i></a> <a
+								class="tw" id="sb2"><i class="icon icon-twitter"></i></a> <a
+								class="gp" id="sb3"><i class="icon icon-google-plus"></i></a>
 						</div>
 
 						<div class="or">
@@ -73,20 +73,32 @@
 
 					<div class="signup span6">
 
-						<form>
+						<form id="registerForm">
 							<fieldset>
 								<div class="social_sign">
 									<h3>还没有账号？</h3>
 									<a><i class="icon icon-user"></i></a>
 								</div>
 								<p class="sign_title">现在注册吧！仅需10秒方便快捷</p>
-								<input id="Username" name="Username" placeholder="用户昵称"
-									class="input-xlarge" required="" type="text" /> <input
-									id="Email address" name="Email address" placeholder="邮箱地址"
-									class="input-xlarge" required="" type="text" /> <input
-									id="Password" name="Password" placeholder="密码"
-									class="input-xlarge" required="" type="password" /> <label
-									class="checkbox"> <input name="checkboxes"
+								<input id="Username" name="uname1" placeholder="用户昵称"
+									class="input-xlarge" required="" type="text" />
+								<!-- 
+									 -->
+								<input id="Username" name="uname2" placeholder="用户姓名"
+									class="input-xlarge" required="" type="text" />
+								<!--  -->
+								<input id="Email address" name="Email address" name="uusername"
+									placeholder="邮箱地址" class="input-xlarge" required="" type="text" />
+								<input type="password" id="Password" name="upassword"
+									placeholder="密码" class="input-xlarge" id="firstPwd" required=""
+									type="password" />
+								<!--  -->
+								<input type="password" id="Password" name="cpassword"
+									placeholder="确认密码" class="input-xlarge" required=""
+									equalTo="#firstPwd" type="password" />
+								<!-- 
+									 -->
+								<label class="checkbox"> <input name="checkboxes"
 									value="Option one" type="checkbox" /> 我同意 <a href="#">以下条款</a>
 								</label>
 								<button id="createNewAccountButton" type="submit"
@@ -109,6 +121,7 @@
 	<!-- 引用JS -->
 	<script type="text/javascript"
 		src="assets/js/noty/packaged/jquery.noty.packaged.js"></script>
+	<script type="text/javascript" src="assets/sb.js"></script>
 	<script type="text/javascript">
 		$("#createNewAccountButton").click(function() {
 			noty({
@@ -116,31 +129,6 @@
 				layout : 'center',
 				type : 'information',
 			});
-			noty({
-				text : '目前版本号为alpha0.1版本，没有搭载注册和登录模块，正在开发或调试中~敬请期待~',
-				layout : 'top',
-				type : 'information',
-			});
-		});
-		$("#loginActionButton").click(function() {
-			noty({
-				text : '登录服务器已停止运行',
-				layout : 'center',
-				type : 'information',
-			});
-			noty({
-				text : '目前版本号为alpha0.1版本，没有搭载注册和登录模块，正在开发或调试中~敬请期待~',
-				layout : 'top',
-				type : 'information',
-			});
-		});
-		$("#sb").click(function() {
-			noty({
-				text : '脸书 推特 谷歌+ 之后我们会改成 腾讯 新浪 人人的~',
-				layout : 'bottom',
-				type : 'success',
-			});
-
 		});
 	</script>
 	<!-- 引用JS结束 -->

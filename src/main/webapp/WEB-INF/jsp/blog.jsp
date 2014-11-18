@@ -77,10 +77,6 @@
 					</div>
 					<jsp:include page="template/template_blog_right.jsp"></jsp:include>
 				</div>
-				<label class="control-label  col-md-3">CKEditor</label>
-				<div class="col-md-9">
-					<textarea class="ckeditor form-control" name="editor1" rows="6"></textarea>
-				</div>
 			</section>
 		</div>
 

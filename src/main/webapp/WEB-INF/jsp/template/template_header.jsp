@@ -3,9 +3,20 @@
 <%@ page import="org.jichuang.base.model.*"%>
 <%
 	Userinfo loginedUser = (Userinfo) session.getAttribute("USERINFO");
+	String insertRes = (String) request.getAttribute("insertRes");
+	String updateRes = (String) request.getAttribute("updateRes");
+	String deleteRes = (String) request.getAttribute("deleteRes");
+	String selectRes = (String) request.getAttribute("selectRes");
+	//System.out.println(insertRes + ":" + updateRes + ":" + deleteRes	+ ":" + selectRes );
 %>
 <!-- 网页抬头 -->
 <header>
+	<div class="hidden">
+		<input type="hidden" id="insertRes" value="<%=insertRes%>" /> <input
+			type="hidden" id="updateRes" value="<%=updateRes%>" /> <input
+			type="hidden" id="deleteRes" value="<%=deleteRes%>" /> <input
+			type="hidden" id="selectRes" value="<%=selectRes%>" />
+	</div>
 	<div class="container">
 		<div class="navbar">
 			<div class="navbar-inner">
@@ -42,9 +53,12 @@
 			<%
 				} else {
 			%>
-			<a> <i class="icon icon-user"></i>欢迎！ <%=loginedUser.getUname().split("#")[0]%>
-				<span class="divider">/</span> <%=loginedUser.getUname().split("#")[1]%>
-			</a>
+			<font size="2"> <a> <i class="icon icon-user"></i>欢迎！ <%=loginedUser.getUname().split("#")[0]%>
+					<span class="divider">/</span> <%=loginedUser.getUname().split("#")[1]%>
+
+			</a> <span class="divider">||</span><a href="usr/logout.hopedo"><font
+					color="red"> [ 登出 ] </font></a>
+			</font>
 			<%
 				}
 			%>

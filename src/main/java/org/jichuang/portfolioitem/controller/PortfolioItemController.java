@@ -31,13 +31,13 @@ public class PortfolioItemController {
 		request.setAttribute("questions", questions);
 		request.setAttribute("answer", answer);
 		request.setAttribute("PORTFOLIOITEM", portfolioItem);
-		return "WEB-INF/jsp/portfolio_item";
+		return "portfolio_item";
 	}
 
 	@RequestMapping("/getAllPortfolioItem")
 	public String showPortfolioList(HttpServletRequest request) {
 		List<PortfolioItem> list = this.portfolioItemService.selectEntryAll();
 		request.setAttribute("PORTFOLIOLIST", list);
-		return "WEB-INF/jsp/portfolio";
+		return "portfolio";
 	}
 }

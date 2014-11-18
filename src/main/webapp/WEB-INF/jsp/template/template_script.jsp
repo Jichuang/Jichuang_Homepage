@@ -1,5 +1,5 @@
-<%@ page language="java" import="java.util.*,org.jichuang.base.message.*"
-	pageEncoding="UTF-8"%>
+<%@ page language="java"
+	import="java.util.*,org.jichuang.base.message.*" pageEncoding="UTF-8"%>
 
 <script type="text/javascript" src="assets/js/jquery-latest.min.js"></script>
 <script>
@@ -19,11 +19,10 @@
 <script type="text/javascript" src="assets/js/jquery.ui.totop.js"></script>
 <script type="text/javascript" src="assets/js/easing.js"></script>
 <script type="text/javascript" src="assets/js/restart_theme.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		var list = $("ul li");
-		var title = $("#title").text();
-		var finder = list.find(title);		
-		finder.attr("class", "active");
-	});
-</script>
+<script type="text/javascript" src="assets/res.js"></script>
+<script type="text/javascript"
+	src="assets/js/noty/packaged/jquery.noty.packaged.js"></script>
+<script type="text/javascript"
+	src="assets/plugins/jquery-validation/dist/jquery.validate.js"></script>
+<script type="text/javascript"
+	src="assets/plugins/jquery-validation/localization/messages_zh.js"></script>
