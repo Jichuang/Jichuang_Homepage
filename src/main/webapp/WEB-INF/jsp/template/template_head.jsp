@@ -8,7 +8,7 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
 <meta charset="utf-8" />
-<title id="title"><%=request.getAttribute("PAGE")%>|集创团队</title>
+<title id="title"><%=request.getAttribute("PAGE")%> | 集创团队 JiChuang Organization</title>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="assets/less/animate.less-master/animate.css"

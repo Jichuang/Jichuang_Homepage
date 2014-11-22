@@ -9,6 +9,13 @@ $(document).ready(
 					+ selectRes);
 			if (insertRes != "null") {
 				if (insertRes != 0) {
+					if ($("#title").text() == "注册登录|集创团队") {
+						noty({
+							text : '注册成功，请在验证邮箱之后登录',
+							layout : 'center',
+							type : 'success',
+						});
+					}
 					noty({
 						text : '数据添加成功',
 						layout : 'bottomLeft',
@@ -83,3 +90,7 @@ $(document).ready(
 			}
 
 		});
+
+$("#adminBtn").on("click", function() {
+	window.location = "page/admin.hopedo";
+});

@@ -1,10 +1,13 @@
+<%@page import="org.jichuang.blog.model.Blog"%>
+<%@page import="org.jichuang.blog.model.*"%>
 <%@page import="org.jichuang.base.message.*"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
+	+ request.getServerName() + ":" + request.getServerPort()
+	+ path + "/";
+	List<Blog> list = (List<Blog>) request.getAttribute("BLOGLIST");
 %>
 
 <!doctype html>
@@ -38,17 +41,17 @@
 				<div class="row">
 					<div id="col" class="span8">
 						<%
-							for (int i = 0; i < 5; i++) {
+							for (Blog blog : list) {
 						%>
 						<article class="post">
 							<div class="post_header">
 								<h3 class="post_title">
-									<a href="page/single.hopedo">《Thinking in Java》学习笔记 第21章 并发</a>
+									<a href="page/single.hopedo"><%=blog.getbTitle()%></a>
 								</h3>
 								<div class="post_sub">
-									<i class="icon icon-user"></i><a href="#"> Hope6537 </a><span
-										class="divider">/</span> <i class="icon-time"></i> 2014-11-17
-									15:43:51 <span class="divider">/</span> <a
+									<i class="icon icon-user"></i><a href="#"> <%=blog.getbUid().getUname()%>
+									</a><span class="divider">/</span> <i class="icon-time"></i>
+									<%=blog.getbDate()%><span class="divider">/</span> <a
 										href="single_post.html#post_comments"><i
 										class="icon-comments-alt"></i> 6条评论</a>
 
@@ -56,8 +59,14 @@
 							</div>
 							<div class="post_content">
 								<br />
-								<p>说道并发，就有种异常高大上的感觉，好像比那些顺序编程有种不可明辨的优越感一样，是的，并发的确更深奥，而且现在全世界都离不开并发程序。
-									但是什么是并发？并发能做什么？并发如何实现？....</p>
+								<%
+									String cont = blog.getbCont();
+									if(cont.length()>100){
+										cont = cont.substring(0, 100);	
+									}
+									cont += ".....";
+								%>
+								<p><%=cont%></p>
 							</div>
 						</article>
 						<%

@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		<div id="social_media_wrapper">
-			<button class="btn btn-primary">Coder's Road</button>
+			<button id="adminBtn" class="btn btn-primary">Coder's Road</button>
 		</div>
 		<div id="sign">
 			<%

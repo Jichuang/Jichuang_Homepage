@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.log4j.Logger;
 import org.jichuang.base.model.Userinfo;
 import org.jichuang.base.service.UserinfoService;
+import org.jichuang.base.utils.AESLocker;
 import org.jichuang.portfolioitem.service.PortfolioItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -37,13 +38,16 @@ public class UserinfoController {
 				.selectEntryByHQL("from Userinfo where uusername = '"
 						+ username + "'");
 		for (Userinfo u : list) {
-			if (userinfo.getUpassword().equals(u.getUpassword())) {
+			if (userinfo.getUpassword().equals(
+					AESLocker.Decrypt(u.getUpassword()))) {
 				request.getSession().setAttribute("USERINFO", u);
 				request.setAttribute("PAGE", "网站首页");
+				request.setAttribute("selectRes", 1 + "");
 				return PageContextController.PATH + "/index";
 			}
 		}
-		request.setAttribute("PAGE", "登录/注册");
+		request.setAttribute("selectRes", 0 + "");
+		request.setAttribute("PAGE", "注册登录");
 		return PageContextController.PATH + "/register";
 	}
 
@@ -52,6 +56,21 @@ public class UserinfoController {
 		request.getSession().setAttribute("USERINFO", null);
 		request.setAttribute("PAGE", "网站首页");
 		return "index";
+	}
+
+	@RequestMapping("/register")
+	public String toRegister(Model model, @ModelAttribute Userinfo userinfo,
+			HttpServletRequest request) {
+		request.setAttribute("PAGE", "注册登录");
+		int res = 0;
+		logger.info(userinfo.toString());
+		try {
+			res = userinfoService.register(userinfo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		request.setAttribute("insertRes", res + "");
+		return "register";
 
 	}
 }

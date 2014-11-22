@@ -73,25 +73,24 @@
 
 					<div class="signup span6">
 
-						<form id="registerForm">
+						<form id="registerForm" action="usr/register.hopedo" method="post">
 							<fieldset>
 								<div class="social_sign">
 									<h3>还没有账号？</h3>
 									<a><i class="icon icon-user"></i></a>
 								</div>
 								<p class="sign_title">现在注册吧！仅需10秒方便快捷</p>
-								<input id="Username" name="uname1" placeholder="用户昵称"
+								<!-- <input id="Username" name="uname1" placeholder="用户昵称"
 									class="input-xlarge" required="" type="text" />
-								<!-- 
-									 -->
+								
+									
 								<input id="Username" name="uname2" placeholder="用户姓名"
 									class="input-xlarge" required="" type="text" />
-								<!--  -->
-								<input id="Email address" name="Email address" name="uusername"
-									placeholder="邮箱地址" class="input-xlarge" required="" type="text" />
-								<input type="password" id="Password" name="upassword"
-									placeholder="密码" class="input-xlarge" id="firstPwd" required=""
-									type="password" />
+								 -->
+								<input id="Email address" name="uusername" placeholder="邮箱地址"
+									class="input-xlarge" required="" type="text" /> <input
+									type="password" id="Password" name="upassword" placeholder="密码"
+									class="input-xlarge" id="firstPwd" required="" type="password" />
 								<!--  -->
 								<input type="password" id="Password" name="cpassword"
 									placeholder="确认密码" class="input-xlarge" required=""
