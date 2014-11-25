@@ -1,12 +1,7 @@
 <%@ page language="java"
 	import="java.util.*,org.jichuang.base.message.*" pageEncoding="UTF-8"%>
-
+<script src="assets/js/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-latest.min.js"></script>
-<script>
-	window.jQuery
-			|| document
-					.write('<script src="js/jquery-1.9.0.min.js"><\/script>')
-</script>
 <script src="assets/twitter-bootstrap/js/bootstrap.min.js"
 	type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/modernizr.custom.48287.js"></script>
@@ -26,3 +21,17 @@
 	src="assets/plugins/jquery-validation/dist/jquery.validate.js"></script>
 <script type="text/javascript"
 	src="assets/plugins/jquery-validation/localization/messages_zh.js"></script>
+
+<script type="text/javascript"
+	src="assets/plugins/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript"
+	src="assets/plugins/select2/select2.min.js"></script>
+<script type="text/javascript"
+	src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/table-editable.js"></script>
+<script>
+	jQuery(document).ready(function() {
+		TableEditable.init();
+	});
+</script>

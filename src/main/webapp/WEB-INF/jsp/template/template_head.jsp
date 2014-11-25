@@ -1,5 +1,5 @@
-<%@ page language="java" import="java.util.*,org.jichuang.base.message.*"
-	pageEncoding="UTF-8"%>
+<%@ page language="java"
+	import="java.util.*,org.jichuang.base.message.*" pageEncoding="UTF-8"%>
 
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -8,7 +8,8 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
 <meta charset="utf-8" />
-<title id="title"><%=request.getAttribute("PAGE")%> | 集创团队 JiChuang Organization</title>
+<title id="title"><%=request.getAttribute("PAGE")%> | 集创团队
+	JiChuang Organization</title>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="assets/less/animate.less-master/animate.css"
@@ -35,4 +36,10 @@
 <link rel="assets/apple-touch-icon-precomposed"
 	href="assets/apple-touch-icon-57x57-precomposed.png" />
 <link rel="shortcut icon" href="assets/favicon.png" />
+<link rel="stylesheet" type="text/css"
+	href="assets/plugins/select2/select2_metro.css" />
+<link rel="stylesheet"
+	href="assets/plugins/data-tables/DT_bootstrap.css" />
+<link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
