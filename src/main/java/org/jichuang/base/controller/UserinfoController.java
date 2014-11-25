@@ -55,7 +55,7 @@ public class UserinfoController {
 	public String toLogout(HttpServletRequest request) {
 		request.getSession().setAttribute("USERINFO", null);
 		request.setAttribute("PAGE", "网站首页");
-		return "index";
+		return PageContextController.PATH + "index";
 	}
 
 	@RequestMapping("/register")
@@ -70,7 +70,7 @@ public class UserinfoController {
 			e.printStackTrace();
 		}
 		request.setAttribute("insertRes", res + "");
-		return "register";
+		return PageContextController.PATH + "register";
 
 	}
 }

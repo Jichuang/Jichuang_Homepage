@@ -4,15 +4,18 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.jichuang.base.controller.PageContextController;
 import org.jichuang.portfolioitem.model.PortfolioItem;
 import org.jichuang.portfolioitem.service.PortfolioItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/portfolioItemController")
+@Scope("prototype")
 public class PortfolioItemController {
 	@Autowired(required = true)
 	private PortfolioItemService portfolioItemService;
@@ -31,13 +34,13 @@ public class PortfolioItemController {
 		request.setAttribute("questions", questions);
 		request.setAttribute("answer", answer);
 		request.setAttribute("PORTFOLIOITEM", portfolioItem);
-		return "portfolio_item";
+		return PageContextController.PATH + "portfolio_item";
 	}
 
 	@RequestMapping("/getAllPortfolioItem")
 	public String showPortfolioList(HttpServletRequest request) {
 		List<PortfolioItem> list = this.portfolioItemService.selectEntryAll();
 		request.setAttribute("PORTFOLIOLIST", list);
-		return "portfolio";
+		return PageContextController.PATH + "portfolio";
 	}
 }

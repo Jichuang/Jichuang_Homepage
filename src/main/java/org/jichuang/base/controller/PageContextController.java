@@ -9,15 +9,17 @@ import org.jichuang.blog.service.BlogService;
 import org.jichuang.portfolioitem.model.PortfolioItem;
 import org.jichuang.portfolioitem.service.PortfolioItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/page")
+@Scope("prototype")
 public class PageContextController {
 
-	public static final String PATH = "";
+	public static final String PATH = "front/";
 
 	@Autowired
 	private BlogService blogService;
